@@ -25,7 +25,7 @@ const app =  () => {
         "./videos/peIvan.mp4",
         "./videos/smoke.mp4" 
     ]
-// Time Dsiplay
+// Time Display
     const timeDisplay = document.querySelector(".time-display");
     const timeSelect = document.querySelectorAll(".time-select button")
     //Get lentght pf outline
@@ -40,18 +40,18 @@ const app =  () => {
 // PLay different Sounds
         chooseSong.addEventListener("click", function () {
         song.src = musics[Math.floor(Math.random() * 7)];
-            checkPlaying(song)
+            checkPlaying(song, video)
         })
     
         chooseVid.addEventListener("click", function () {
             video.src = videos[Math.floor(Math.random() * 5)];
-        checkPlaying(video);
+        checkPlaying(song, video);
              
             })
     
 //play sound
     play.addEventListener("click", () => {
-        checkPlaying(song);
+        checkPlaying(song, video);
     });
 
 
@@ -63,7 +63,7 @@ const app =  () => {
         });
     });
 
-    const checkPlaying = (song) => {
+    const checkPlaying = (song, video) => {
         if (song.paused || video.paused) {
             song.play();
             video.play();
