@@ -45,7 +45,7 @@ const app =  () => {
     
         chooseVid.addEventListener("click", function () {
             video.src = videos[Math.floor(Math.random() * 5)];
-        checkPlaying(song);
+        checkPlaying(video);
              
             })
     
