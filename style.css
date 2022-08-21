@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app{
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.time-select,
+.sound-picker,
+.player-container
+{
+    flex: 1;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+video{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    z-index: -10;
+}
+
+.time-select button{
+    padding: 15px;
+    width: 30%;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: transparent;
+    color: white;
+    border: white 2px solid;
+    box-shadow: 2px 2px 2px black ;
+    cursor: pointer;
+    transition: all 0.5s ease-in;
+}
+.time-select button:hover{
+    background-color: #fff;
+    border: 2px solid black;
+    color: black;
+}
+.player-container {
+    position: relative;
+}
+.player-container .play{
+    cursor: pointer;
+}
+.player-container svg{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    height: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    pointer-events: none;
+}
+
+.time-display{
+    color: white;
+    position: absolute;
+    bottom: 10%;
+    font-size: 50px;
+}
+
+.sound-picker button{
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    border: none;
+    padding: 30px;
+}
+.sound-picker button:nth-child(1){
+    background-color:#4972a1;
+    cursor: pointer;
+}
+.sound-picker button:nth-child(1):hover{
+    background-color:#0a6ddf;
+}
+.sound-picker button:nth-child(1):active{
+    background-color:#0661c9;
+}
+.sound-picker button:nth-child(2){
+    background-color:#a14f49;
+}
+.sound-picker button:nth-child(2):hover{
+    background-color:#d3271b;
+    cursor: pointer;
+}
+.sound-picker button:nth-child(2):active{
+    background-color:#c9190d;
+    cursor: pointer;
+}
+.sound-picker button img{
+    height: 70%;
+    margin-top: -10px;
+   margin-bottom: 10px;
+}
+
+.describe{
+    color: white;
+    font-size: 0.7rem;
+}
+
+@media screen and (max-width: 500px){
+    body{
+        overflow-y: hidden;
+    }
+    .app{
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .time-select,
+.sound-picker,
+.player-container
+{
+    flex: 1;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+video{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: auto;
+    z-index: -10;
+}
+.time-select button{
+    padding: 5px;
+    width: 20%;
+    border-radius: 15px;
+    font-size: 10px;
+    margin-left: 10px;
+    font-weight: bold;
+    background-color: transparent;
+    color: white;
+    border: white 2px solid;
+    box-shadow: 2px 2px 2px black ;
+    cursor: pointer;
+    transition: all 0.5s ease-in;
+}
+.player-container .play{
+    cursor: pointer;
+    width: 50%;
+}
+
+/*.time-select{
+    background-color: blue;
+}
+.sound-picker{
+    background-color: green;
+}
+.player-container{
+    background-color: yellow;
+}*/
+.player-container svg{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    height: 80%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    pointer-events: none;
+}
+.time-display{
+    color: white;
+    position: absolute;
+    bottom: -15%;
+    font-size: 1rem;
+}
+.sound-picker button{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    margin-left: 15px;
+    border: none;
+    padding: 5px;
+}
+.sound-picker button img{
+    height: 40%;
+    margin-top: -10px;
+   margin-bottom: 10px;
+}
+.describe{
+    color: white;
+    font-size: 8px;
+}
+}
