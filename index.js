@@ -39,19 +39,19 @@ const app =  () => {
 
 // PLay different Sounds
         chooseSong.addEventListener("click", function () {
-        song.src = musics[Math.floor(Math.random() * 7)];
-            checkPlaying(song, video)
+        song.src = musics[Math.floor(Math.random() * 6)];
+            checkPlaying(song)
         })
     
         chooseVid.addEventListener("click", function () {
-            video.src = videos[Math.floor(Math.random() * 5)];
-        checkPlaying(song, video);
+            video.src = videos[Math.floor(Math.random() * 4)];
+        checkPlaying(song);
              
             })
     
 //play sound
     play.addEventListener("click", () => {
-        checkPlaying(song, video);
+        checkPlaying(song);
     });
 
 
@@ -63,7 +63,7 @@ const app =  () => {
         });
     });
 
-    const checkPlaying = (song, video) => {
+    const checkPlaying = (song) => {
         if (song.paused || video.paused) {
             song.play();
             video.play();
